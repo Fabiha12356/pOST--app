@@ -12,10 +12,10 @@ addBtn.addEventListener("click" , () =>{
 document.body.append(div);
 div.className = "cards"
 
-let h1 = document.createElement("h1");
-h1.innerHTML = input.value
+let h3 = document.createElement("h3");
+h3.innerHTML = input.value
 
-div.append(h1);
+div.append(h3);
 let editBtn = document.createElement("button");
 editBtn.innerHTML = "edit"
 
@@ -25,14 +25,16 @@ delBtn.innerHTML = "delte"
 div.append(editBtn);
 div.append(delBtn);
 
-
+editBtn.className = "buttons"
+delBtn.className = "buttons , del_btn "
+// delBtn.className = "del_btn"
 
 editBtn.addEventListener("click" , () =>{
     console.log("click");
-    console.log(h1.innerHTML)
-    let update = prompt("enter the new task" , h1.innerHTML)
+    console.log(h3.innerHTML)
+    let update = prompt("enter the new task" , h3.innerHTML)
     console.log(update);
-    h1.innerHTML = update;
+    h3.innerHTML = update;
     input.value = "";
 })
 
@@ -42,7 +44,6 @@ delBtn.addEventListener("click" , () =>{
     div.remove();
     input.value = "";
 })
-
 
 
 })
