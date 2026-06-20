@@ -7,7 +7,6 @@ console.log(addBtn);
 
 
 addBtn.addEventListener("click" , () =>{
-    console.log(input.value)
     let div = document.createElement("div");
 document.body.append(div);
 div.className = "cards"
@@ -24,10 +23,11 @@ delBtn.innerHTML = "delte"
 
 div.append(editBtn);
 div.append(delBtn);
+input.value = "";
 
 editBtn.className = "buttons"
 delBtn.className = "buttons , del_btn "
-// delBtn.className = "del_btn"
+
 
 editBtn.addEventListener("click" , () =>{
     console.log("click");
